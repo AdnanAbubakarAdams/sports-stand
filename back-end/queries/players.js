@@ -33,7 +33,30 @@ const createPlayer = async (player) => {
     } catch (error) {
         return error;
     }
-}
+};
+
+// QUERY TO DELETE AN ICON OR PLAYER 
+const deletePlayer = async (id) => {
+    try {
+        const deletedPlayer = await db.one("DELETE FROM players WHERE id = $1 RETURNING *", id);
+        return deletedPlayer;
+    } catch (error) {
+        return error;
+    }
+};
+
+// QUERY TO UPDATE AN IDOL OR PLAYER
+const updatePlayer = async (player, id) => {
+    const { name, age, team, nationality, position, prefered, image, is_idol } = player;
+    try {
+        const updatedPlayer = await db.one("UPDATE players SET name = $1, age = $2, team = $3, nationality = $4, position = $5, prefered = $6, image = $7, is_idol = $8 WHERE id = $9 RETURNING *",
+        [name, age, team, nationality, position, prefered, image, is_idol, id])
+        return updatedPlayer;
+    } catch(err) {
+        return err;
+    }
+};
+
 
 
 
@@ -41,5 +64,7 @@ const createPlayer = async (player) => {
 module.exports = {
     getAllPlayers,
     getPlayer, 
-    createPlayer
+    createPlayer,
+    deletePlayer,
+    updatePlayer
 };

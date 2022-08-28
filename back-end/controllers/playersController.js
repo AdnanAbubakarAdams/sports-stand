@@ -6,7 +6,9 @@ const players = express.Router();
 const {
     getAllPlayers,
     getPlayer,
-    createPlayer
+    createPlayer,
+    deletePlayer,
+    updatePlayer
 } = require("../queries/players.js");
 
 
@@ -39,6 +41,28 @@ players.post("/", async (req, res) => {
         res.json(player);
     } catch (error) {
         return error;
+    }
+});
+
+// DELETE // DELETE IDOL OR PLAYER
+players.delete("/:id", async (req, res) => {
+    const { id } = req.params;
+    const deletedPlayer = await deletePlayer(id)
+    if(deletedPlayer.id) {
+        res.status(200).json(deletedPlayer)
+    } else {
+        res.status(400).json("Idol Not Found");
+    }
+});
+
+// UPDATE AN IDOL OR PLAYER
+players.put("/:id", async (req, res) => {
+    const { id } = req.params;
+    const updatedPlayer = await updatePlayer(req.body, id);
+    if(updatedPlayer.id) {
+        res.status(200).json(updatedPlayer);
+    } else {
+        res.status(400).json({ error: "Your Idol has not been updated" })
     }
 });
 
