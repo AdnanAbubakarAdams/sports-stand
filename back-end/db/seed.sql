@@ -3,8 +3,16 @@
 INSERT INTO players (name, age, team, nationality, position, prefered, image, is_idol) VALUES 
 ('Cristiano Ronaldo', 37, 'Manchester United', 'Portugal', 'Forward', 'Right', 'https://tinyurl.com/ysy8k9e5', true),
 ('Lebron James', 37, 'Lakers', 'USA', 'Forward', 'Right', 'https://tinyurl.com/25wchw9v', true),
+('Lionel Messi', 35, 'Paris Saint-Germain', 'Argentina', 'Right Winger', 'Left', 'https://tinyurl.com/28y2ycth', false),
+('Anthony Davis', 30, 'Lakers', 'USA', 'Center', 'Right', 'https://tinyurl.com/5r8stuv7', false),
 ('Bruno Fernandez', 27, 'Manchester United', 'Portugal', 'Attacking Midfielder', 'Right', 'https://tinyurl.com/2brx9wd4', false),
+('Kevin Durant', 30, 'Brooklyn Nets', 'USA', 'Guard', 'Right', 'https://tinyurl.com/bdd8bpsp', false),
 ('Marcus Rashford', 24, 'Manchester United', 'England', 'Attacking Midfielder', 'Right', 'https://tinyurl.com/4dnjrt46', false),
+('Kyrie Irving', 33, 'Brooklyn Nets', 'USA', 'Forward', 'Right', 'https://tinyurl.com/mtnz3btn', false),
 ('Anthony Martial', 26, 'Manchester United', 'France', 'Striker', 'Right', 'https://tinyurl.com/5xyt8n2x', false),
+('Stephen Curry', 34, 'Golden State Warriors', 'USA', 'Guard', 'Right', 'https://tinyurl.com/mrys4vtj', false),
 ('Casemiro', 30, 'Manchester United', 'Brazil', 'Midfielder', 'Right', 'https://tinyurl.com/23b7ujwf', false),
+('Ja Morant', 23, 'Memphis Grizzlies', 'USA', 'Guard', 'Right', 'https://tinyurl.com/4zz7b828', true),
+('Mohamed Salah', 30, 'Liverpool', 'Egypt', 'Right Winger', 'Left', 'https://tinyurl.com/nhbfra45', false),
+('Giannis Antetokounmpo', 27, 'Milwaukee Bucks', 'Greece', 'Forward', 'Right', 'https://tinyurl.com/2syzef42', false),
 
