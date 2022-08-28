@@ -1,3 +1,4 @@
+const players = require("../controllers/playersController.js");
 const db = require("../db/dbConfig.js");
 
 // QUERY FOR ALL PLAYERS 
@@ -20,10 +21,25 @@ const getPlayer = async (id) => {
     }
 };
 
+// QUERY TO CREATE A PLAYER
+const createPlayer = async (player) => {
+    const { name, age, team, nationality, position, prefered, image, is_idol } = player;
+    try {
+        const newPlayer = await db.one(
+            "INSERT INTO players (name, age, team, nationality, position, prefered, image, is_idol) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *",
+            [name, age, team, nationality, position, prefered, image, is_idol]
+        );
+        return newPlayer;
+    } catch (error) {
+        return error;
+    }
+}
+
 
 
 
 module.exports = {
     getAllPlayers,
-    getPlayer
+    getPlayer, 
+    createPlayer
 };

@@ -5,7 +5,8 @@ const players = express.Router();
 // IMPORTING ALL QUERIES
 const {
     getAllPlayers,
-    getPlayer
+    getPlayer,
+    createPlayer
 } = require("../queries/players.js");
 
 
@@ -28,6 +29,16 @@ players.get("/:id", async (req, res) => {
         res.json(player);
     } else {
         res.status(404).json({ error: "not Found"});
+    }
+});
+
+// CREATE // CREATE AN IDOL OR PLAYER
+players.post("/", async (req, res) => {
+    try {
+        const player = await createPlayer(req.body);
+        res.json(player);
+    } catch (error) {
+        return error;
     }
 });
 
