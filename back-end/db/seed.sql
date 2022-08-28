@@ -14,5 +14,5 @@ INSERT INTO players (name, age, team, nationality, position, prefered, image, is
 ('Casemiro', 30, 'Manchester United', 'Brazil', 'Midfielder', 'Right', 'https://tinyurl.com/23b7ujwf', false),
 ('Ja Morant', 23, 'Memphis Grizzlies', 'USA', 'Guard', 'Right', 'https://tinyurl.com/4zz7b828', true),
 ('Mohamed Salah', 30, 'Liverpool', 'Egypt', 'Right Winger', 'Left', 'https://tinyurl.com/nhbfra45', false),
-('Giannis Antetokounmpo', 27, 'Milwaukee Bucks', 'Greece', 'Forward', 'Right', 'https://tinyurl.com/2syzef42', false),
+('Giannis Antetokounmpo', 27, 'Milwaukee Bucks', 'Greece', 'Forward', 'Right', 'https://tinyurl.com/2syzef42', false);
 

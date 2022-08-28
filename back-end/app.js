@@ -6,11 +6,14 @@ const cors = require("cors");
 const app = express();
 
 // CONTROLLERS
+const playersController = require("./controllers/playersController.js")
 
 
 // MIDDLEWARE
 app.use(cors());
 app.use(express.json());
+
+app.use("/players", playersController)
 
 
 // ROUTES 
