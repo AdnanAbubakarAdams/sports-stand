@@ -1,15 +1,16 @@
 import React,{ useState } from 'react';
-import { BasketBallData } from './BasketBallData';
+import { StoresData } from './StoresData';
 import { Link } from "react-router-dom";
-import "./BasketBall.css"
+import './Stores.css';
 
-const BasketBallDropdown = () => {
-    const [click, setClick] = useState(false);
+
+const StoresDropdown = () => {
+  const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click)
   return (
     <>
     <ul onClick={handleClick} className={click ? 'clicked' : 'menu'}>
-        {BasketBallData.map((data, index) => {
+        {StoresData.map((data, index) => {
             return (
                 <li key={index}>
                     <Link className={data.cn} to={data.path} onClick={() => setClick(false)}>{data.title}</Link>
@@ -22,4 +23,4 @@ const BasketBallDropdown = () => {
   )
 }
 
-export default BasketBallDropdown
+export default StoresDropdown;
