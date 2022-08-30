@@ -11,6 +11,9 @@ const {
     updatePlayer
 } = require("../queries/players.js");
 
+// IMPORTING VALIDATIONS
+const { validateUrl } = require("../validations/checkPlayers")
+
 
 // BUILDING OUT THE ROUTES 
 // INDEX // ALL PLAYERS
@@ -35,7 +38,7 @@ players.get("/:id", async (req, res) => {
 });
 
 // CREATE // CREATE AN IDOL OR PLAYER
-players.post("/", async (req, res) => {
+players.post("/", validateUrl, async (req, res) => {
     try {
         const player = await createPlayer(req.body);
         res.json(player);
@@ -56,7 +59,7 @@ players.delete("/:id", async (req, res) => {
 });
 
 // UPDATE AN IDOL OR PLAYER
-players.put("/:id", async (req, res) => {
+players.put("/:id", validateUrl, async (req, res) => {
     const { id } = req.params;
     const updatedPlayer = await updatePlayer(req.body, id);
     if(updatedPlayer.id) {
