@@ -4,7 +4,8 @@ import './App.css';
 import Navbar from './components/NavBar/Navbar';
 
 // PAGES 
-import Index from './components/pages/Index';
+import Index from './pages/Index';
+import Show from './pages/Show';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/players" element={<Index />} />
+        <Route path="/players/:id" element={<Show/>} />
       </Routes>
     </Router>
   );

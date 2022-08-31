@@ -10,6 +10,11 @@ const Player = ({ player }) => {
         </span>
         <br/>
         <h3>
+          {player.is_idol ? (
+            <span>⭐️</span>
+          ) : (
+            <span>&nbsp; &nbsp; &nbsp;</span>
+          )}
           {player.name}
         </h3>
         </Link>

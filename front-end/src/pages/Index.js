@@ -1,5 +1,5 @@
 import React from 'react';
-import Players from "../Players/Players";
+import Players from "../components/Players/Players";
 
 const Index = () => {
   return (
