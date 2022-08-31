@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const Button = () => {
   return (
     <div className="btn-sep">
-      <Link to="/idol/new">
+      <Link to="/players/new">
         <button className='btn'>ADD IDOL</button>
       </Link>
 
