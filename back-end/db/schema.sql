@@ -13,4 +13,16 @@ CREATE TABLE players (
     prefered TEXT,
     image TEXT, 
     is_idol BOOLEAN
+);
+
+DROP TABLE IF EXISTS comments;
+
+CREATE TABLE comments (
+    id SERIAL PRIMARY KEY,
+    commenter TEXT,
+    comment TEXT,
+    rating INTEGER,
+    CHECK (rating >= 0 AND rating <= 10),
+    player_id INTEGER REFERENCES players (id)
+    ON DELETE CASCADE
 )

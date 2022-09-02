@@ -11,7 +11,7 @@ const Player = ({ player }) => {
         <br/>
         <h3>
           {player.is_idol ? (
-            <span>⭐️</span>
+            <span>🫀</span>
           ) : (
             <span>&nbsp; &nbsp; &nbsp;</span>
           )}

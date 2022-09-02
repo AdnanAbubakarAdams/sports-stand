@@ -34,7 +34,7 @@ const PlayerDetails = () => {
       <article>
       <aside>
       {player.is_idol ? (
-            <span>⭐️</span>
+            <span>🫀</span>
           ) : (
             <span>&nbsp; &nbsp; &nbsp;</span>
           )}
