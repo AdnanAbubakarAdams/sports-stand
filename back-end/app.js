@@ -7,6 +7,7 @@ const app = express();
 
 // CONTROLLERS
 const playersController = require("./controllers/playersController.js");
+// const commentsController = require("./controllers/commentsController.js")
 
 
 
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/players", playersController)
+// app.use("/comments", commentsController)
 
 
 
