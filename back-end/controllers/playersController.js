@@ -1,6 +1,7 @@
 // CONFIGURATIONS
 const express = require("express");
 const players = express.Router();
+const commentsController = require("./commentsController.js");
 
 // IMPORTING ALL QUERIES
 const {
@@ -12,7 +13,10 @@ const {
 } = require("../queries/players.js");
 
 // IMPORTING VALIDATIONS
-const { validateUrl } = require("../validations/checkPlayers")
+const { validateUrl } = require("../validations/checkPlayers");
+
+// MIDDLEWARE
+players.use("/:playerId/comments", commentsController)
 
 
 // BUILDING OUT THE ROUTES 
