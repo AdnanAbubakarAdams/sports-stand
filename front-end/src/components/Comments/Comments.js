@@ -3,13 +3,14 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import CommentForm from './CommentForm';
 import Comment from './Comment';
+import  "./Comments.css"
 
 
 
 const Comments = (props) => {
   const API = process.env.REACT_APP_API_URL;
 
-  const [commentss, setCommentss] = useState([]);
+  const [comments, setComments] = useState([]);
 
   let { id } = useParams();
   
@@ -17,7 +18,7 @@ const Comments = (props) => {
   const handleAdd = (newComment) => {
     axios.post(`${API}/players/${id}/comments`, newComment)
     .then((response) => {
-      setCommentss([response.data, ...commentss])
+      setComments([response.data, ...comments])
     },
     (error) => console.error(error)
     )
@@ -30,12 +31,12 @@ const Comments = (props) => {
   const handleDelete = (commentId) => {
     axios.delete(`${API}/players/${id}/comments/${commentId}`)
     .then((response) => {
-      const copyCommentArr = [...commentss];
-      const indexDeleteComment = copyCommentArr.findIndex((comment) => {
+      const copyCommentArr = [...comments];
+      const indexDeletedComment = copyCommentArr.findIndex((comment) => {
         return comment.id === id;
       });
-      copyCommentArr.splice(indexDeleteComment, 1);
-      setCommentss(copyCommentArr);
+      copyCommentArr.splice(indexDeletedComment, 1);
+      setComments(copyCommentArr);
     },
     (error) => console.log(error)
     )
@@ -46,12 +47,12 @@ const Comments = (props) => {
   const handleEdit = (updateComment) => {
     axios.put(`${API}/players/${id}/comments/${updateComment.id}`, updateComment)
     .then((response) => {
-      const copyCommentArr = [...commentss];
-      const indexUpdateComment = copyCommentArr.findIndex((comment) => {
+      const copyCommentArr = [...comments];
+      const indexUpdatedComment = copyCommentArr.findIndex((comment) => {
         return comment.id === updateComment.id;
       });
-      copyCommentArr[indexUpdateComment] = response.data;
-      setCommentss(copyCommentArr)
+      copyCommentArr[indexUpdatedComment] = response.data;
+      setComments(copyCommentArr)
     })
     .catch((error) => console.log(error));
   };
@@ -59,8 +60,8 @@ const Comments = (props) => {
   useEffect(() => {
     axios.get(`${API}/players/${id}/comments`)
     .then((response) => {
-      console.log(response.data);
-      setCommentss(response.data);
+      // console.log(response.data);
+      setComments(response.data);
     });
   }, [id, API]);
   return (
@@ -68,9 +69,9 @@ const Comments = (props) => {
       <CommentForm handleSubmit={handleAdd}>
         <h4>Drop A comment</h4>
       </CommentForm>
-      {commentss.map((comments) => {
-        <Comment key={comments.id}
-        comments={comments}
+      {comments.map((comments1) => {
+        return <Comment key={comments1.id}
+        comments1={comments1}
         handleDelete={handleDelete}
         handleSubmit={handleEdit}
         />

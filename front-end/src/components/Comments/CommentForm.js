@@ -44,6 +44,7 @@ const CommentForm = ( props ) => {
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="commenter">Name:</label>
+        <br/>
         <input
           id="commenter"
           value={comments.commenter}
@@ -60,7 +61,9 @@ const CommentForm = ( props ) => {
           value={comments.comment}
           onChange={handleChange}
         /> */}
+        <br/>
         <label htmlFor="rating">Rating:</label>
+        <br/>
         <input
           id="rating"
           type="number"
@@ -71,7 +74,9 @@ const CommentForm = ( props ) => {
           value={comments.rating}
           onChange={handleChange}
         />
+        <br/>
         <label htmlFor="comment">Comments:</label>
+        <br/>
         <textarea
           id="comment"
           type="text"
