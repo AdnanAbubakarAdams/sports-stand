@@ -4,7 +4,7 @@ import NewPlayer from '../components/NewPlayer/NewPlayer';
 const New = () => {
   return (
     <div>
-        <h2>New</h2>
+        {/* <h2>New</h2> */}
         <NewPlayer/>
         </div>
   )

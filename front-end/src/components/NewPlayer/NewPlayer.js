@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import "./NewPlayer.css";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -48,6 +49,7 @@ const NewPlayer = () => {
     <div className="New">
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
+        <br/>
         <input
           id="name"
           value={player.name}
@@ -56,7 +58,9 @@ const NewPlayer = () => {
           placeholder="Idol Name"
           required
         />
+        <br/>
         <label htmlFor="age">Age:</label>
+        <br/>
         <input
           id="age"
           type="number"
@@ -65,7 +69,9 @@ const NewPlayer = () => {
           onChange={textChange}
           required
         />
+        <br/>
         <label htmlFor="team">Team:</label>
+        <br/>
         <input
           id="team"
           type="text"
@@ -74,7 +80,9 @@ const NewPlayer = () => {
           placeholder="team"
           onChange={textChange}
         />
+        <br/>
         <label htmlFor="nationality">Nationality:</label>
+        <br/>
         <input
           id="nationality"
           type="text"
@@ -83,7 +91,9 @@ const NewPlayer = () => {
           placeholder="nationality"
           onChange={textChange}
         />
+        <br/>
         <label htmlFor="position">Position:</label>
+        <br/>
         <input
           id="position"
           type="text"
@@ -92,7 +102,9 @@ const NewPlayer = () => {
           placeholder="position"
           onChange={textChange}
         />
+        <br/>
         <label htmlFor="prefered">Prefered:</label>
+        <br/>
         <input
           id="prefered"
           type="text"
@@ -101,7 +113,9 @@ const NewPlayer = () => {
           placeholder="prefered"
           onChange={textChange}
         />
+        <br/>
         <label htmlFor="image">Image:</label>
+        <br/>
         <input
           id="image"
           type="text"
@@ -110,7 +124,9 @@ const NewPlayer = () => {
           placeholder="http://"
           onChange={textChange}
         />
-        <label htmlFor="is_idol">Idol:</label>
+        <br/>
+        <label htmlFor="is_idol">Idol </label>
+        {/* <br/> */}
         <input
           id="is_idol"
           type="checkbox"

@@ -1,0 +1,10 @@
+.details {
+   text-align: center; 
+}
+
+.btn-details {
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+    margin-top: 15px;
+}

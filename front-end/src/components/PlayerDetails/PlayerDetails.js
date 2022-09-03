@@ -2,6 +2,7 @@ import React,{ useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Comments from '../Comments/Comments';
+import "./PlayerDetails.css"
 
 const PlayerDetails = () => {
   const [player, setPlayer] = useState([])
@@ -32,7 +33,7 @@ const PlayerDetails = () => {
 
   return (
     <div>
-      <article>
+      <article className='details'>
       <aside>
       {player.is_idol ? (
             <span>🫀</span>
@@ -50,6 +51,7 @@ const PlayerDetails = () => {
             <h4>Prefered Foot/Hand: {player.prefered}</h4>
           </div>
       </article>
+      
       <div className="btn-details">
         <div>
           <Link to="/players">

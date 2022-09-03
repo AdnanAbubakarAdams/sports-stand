@@ -4,7 +4,7 @@ import EditPlayer from '../components/EditPlayer/EditPlayer';
 const Edit = () => {
   return (
     <div>
-        <h2>Edit</h2>
+        {/* <h2>Edit</h2> */}
         <EditPlayer/>
     </div>
   )
