@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import "./Player.css";
 
 const Player = ({ player }) => {
   return (
     <div className='player'>
-        <Link to={`/players/${player.id}`} >
+        <Link className="link" to={`/players/${player.id}`} >
         <span>
-          <img src={player.image} alt={player.is_idol} width='200px' height='200px'/>
+          <img src={player.image} alt={player.is_idol} width='400px' height='400px'/>
         </span>
         <br/>
         <h3>

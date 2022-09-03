@@ -1,6 +1,7 @@
 import React,{ useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link, useNavigate, useParams } from "react-router-dom";
+import Comments from '../Comments/Comments';
 
 const PlayerDetails = () => {
   const [player, setPlayer] = useState([])
@@ -64,6 +65,7 @@ const PlayerDetails = () => {
           <button className="btn3" onClick={handleDelete}>DELETE</button>
         </div>
       </div>
+      <Comments />
 
     </div>
   )

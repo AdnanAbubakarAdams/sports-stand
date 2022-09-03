@@ -1,7 +1,8 @@
 import React,{ useState, useEffect } from 'react';
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import CommentForm from './CommentForm';
+import Comment from './Comment';
 
 
 

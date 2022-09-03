@@ -18,7 +18,7 @@ const CommentForm = ( props ) => {
 
     useEffect(() => {
       if (commentsDetails) {
-        setComments(commentDetails);
+        setComments(commentsDetails);
       }
     }, [id, commentsDetails, props]);
 

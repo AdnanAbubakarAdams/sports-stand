@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Player from "../Player/Player";
+import "./Players.css"
 
 // Importing our API
 const API = process.env.REACT_APP_API_URL;
@@ -16,11 +17,15 @@ const Players = () => {
   }, []);
   return (
     <div className="players-div">
-      <section className="items">
+      <ul className="items">
         {players.map((player) => {
-          return <Player key={player.id} player={player} />;
+          return (
+            <li>
+          <Player key={player.id} player={player} />
+          </li>
+          )
         })}
-      </section>
+      </ul>
     </div>
   );
 };
