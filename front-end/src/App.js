@@ -11,6 +11,7 @@ import Index from './pages/Index';
 import New from './pages/New';
 import Show from './pages/Show';
 import Leagues from './pages/Leagues';
+import StoresIndex from './pages/StoresIndex';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/players/:id/edit" element={<Edit/>}/>
         {/* <Route path="/basketball" element={<BasketBall/>} /> */}
         <Route path="/leagues" element={<Leagues/>} />
+        <Route path="/stores" element={<StoresIndex/>} />
 
       </Routes>
     </Router>
