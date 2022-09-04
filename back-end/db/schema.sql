@@ -26,3 +26,13 @@ CREATE TABLE comments (
     player_id INTEGER REFERENCES players (id)
     ON DELETE CASCADE
 )
+
+DROP TABLE IF EXISTS store;
+
+CREATE TABLE store (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    price INTEGER,
+    image TEXT,
+    category TEXT,
+)

@@ -24,3 +24,25 @@ INSERT INTO comments (player_id, commenter, comment, rating ) VALUES
 ('4', 'Sadick', 'I do not know sports but this guy looks like a nice guy', 8),
 ('5', 'Mason', 'Bruno is pretty average', 7),
 ('6', 'Olay', 'Durant, I love him', 10);
+
+
+INSERT INTO store (name, price, image, category) VALUES 
+('Manchester United KIT', 89, 'https://tinyurl.com/y599xw69', 'Jersey' ),
+('Lakers KIT', 80, 'https://tinyurl.com/p76tw2ea', 'Jersey'),
+('Madrid KIT', 78, 'https://tinyurl.com/37uc44s4', 'Jersey'),
+('Brooklyn Nets Kit', 86, 'https://tinyurl.com/5t4w4fdh', 'Jersey'),
+('Liverpool KIT', 60, 'https://tinyurl.com/2hm8fxnf', 'Jersey'),
+('Boston Celtics KIT', 60, 'https://tinyurl.com/26w6ym9u', 'Jersey'),
+('Barcelona KIT', 60, 'https://tinyurl.com/5n9bxera', 'Jersey'),
+('Golden State Warriors KIT', 80, 'https://tinyurl.com/2p8ys3p6', 'Jersey'),
+('Bayern Munchen KIT', 75, 'https://tinyurl.com/2p8bh8nj', 'Jersey'),
+('76 Sixers KIT', 80, 'https://tinyurl.com/yuckte2k', 'Jersey'),
+('As Roma KIT', 50, 'https://tinyurl.com/mvdcpb48', 'Jersey'),
+('Lebron 19', 110, 'https://tinyurl.com/mr3fsjt8', 'Shoes'),
+('Air Jordan 11', 450, 'https://tinyurl.com/mr3fsjt8', 'Shoes'),
+('Nike HyperVenom', 220, 'https://tinyurl.com/c62v4cwt', 'Shoes'),
+('Legendary Jordan 1', 437500, 'https://tinyurl.com/3ff4u74b', 'Shoes'),
+('Adidas Predator', 300, 'https://tinyurl.com/2p9bm86m', 'Shoes'),
+('Kyrie 6', 120, 'https://tinyurl.com/bdhnddbw', 'Shoes'),
+('Lotto', 100, 'https://tinyurl.com/2p8t8ue2', 'Shoes'),
+('Nike Phantom', 130, 'https://tinyurl.com/4mycspk2', 'Shoes');
