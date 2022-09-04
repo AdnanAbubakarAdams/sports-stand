@@ -1,4 +1,4 @@
-const players = require("../controllers/playersController.js");
+
 const db = require("../db/dbConfig.js");
 
 // QUERY FOR ALL PLAYERS 

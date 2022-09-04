@@ -25,7 +25,7 @@ CREATE TABLE comments (
     CHECK (rating >= 0 AND rating <= 10),
     player_id INTEGER REFERENCES players (id)
     ON DELETE CASCADE
-)
+);
 
 DROP TABLE IF EXISTS store;
 
@@ -34,5 +34,5 @@ CREATE TABLE store (
     name TEXT NOT NULL,
     price INTEGER,
     image TEXT,
-    category TEXT,
+    category TEXT
 )
