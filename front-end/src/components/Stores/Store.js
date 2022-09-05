@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import "./Stores.css";
 
-const Store = ({ product }) => {
+const Store = ({ product, handleClick }) => {
   return (
     <div className='store'>
         <Link className="link" to={`/products/${product.id}`} >
@@ -13,7 +13,9 @@ const Store = ({ product }) => {
         <h3>
           {product.name}
         </h3>
+        <h4>Price-${product.price}</h4>
         </Link>
+        <button onClick={() => handleClick(product)}>Add To Cart</button>
     </div>
   )
 }

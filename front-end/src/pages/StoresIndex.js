@@ -1,14 +1,14 @@
-import React from 'react';
-import Stores from '../components/Stores/Stores';
+// import React from 'react';
+// import Stores from '../components/Stores/Stores';
 
-const StoresIndex = () => {
-  return (
-    <div>
-        <h2>StoresIndex</h2>
-        <Stores/>
+// const StoresIndex = () => {
+//   return (
+//     <div>
+//         <h2>StoresIndex</h2>
+//         <Stores/>
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default StoresIndex;
+// export default StoresIndex;

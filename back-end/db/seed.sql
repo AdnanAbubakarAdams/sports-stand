@@ -2,9 +2,9 @@
 
 INSERT INTO players (name, age, team, nationality, position, prefered, image, is_idol) VALUES 
 ('Cristiano Ronaldo', 37, 'Manchester United', 'Portugal', 'Forward', 'Right', 'https://tinyurl.com/ysy8k9e5', true),
-('Lebron James', 37, 'Lakers', 'USA', 'Forward', 'Right', 'https://tinyurl.com/4e26smt8', true),
+('Lebron James', 37, 'Lakers', 'USA', 'Forward', 'Right', 'https://tinyurl.com/2p9b9fxs', true),
 ('Lionel Messi', 35, 'Paris Saint-Germain', 'Argentina', 'Right Winger', 'Left', 'https://tinyurl.com/28y2ycth', false),
-('Anthony Davis', 30, 'Lakers', 'USA', 'Center', 'Right', 'https://tinyurl.com/5n7srs6n', false),
+('Anthony Davis', 30, 'Lakers', 'USA', 'Center', 'Right', 'https://tinyurl.com/2cxktj8k', false),
 ('Bruno Fernandez', 27, 'Manchester United', 'Portugal', 'Attacking Midfielder', 'Right', 'https://tinyurl.com/2brx9wd4', false),
 ('Kevin Durant', 30, 'Brooklyn Nets', 'USA', 'Guard', 'Right', 'https://tinyurl.com/bdd8bpsp', false),
 ('Marcus Rashford', 24, 'Manchester United', 'England', 'Attacking Midfielder', 'Right', 'https://tinyurl.com/4dnjrt46', false),
@@ -26,23 +26,23 @@ INSERT INTO comments (player_id, commenter, comment, rating ) VALUES
 ('6', 'Olay', 'Durant, I love him', 10);
 
 
-INSERT INTO store (name, price, image, category) VALUES 
-('Manchester United KIT', 89, 'https://tinyurl.com/y599xw69', 'Jersey' ),
-('Lakers KIT', 80, 'https://tinyurl.com/p76tw2ea', 'Jersey'),
-('Madrid KIT', 78, 'https://tinyurl.com/37uc44s4', 'Jersey'),
-('Brooklyn Nets Kit', 86, 'https://tinyurl.com/5t4w4fdh', 'Jersey'),
-('Liverpool KIT', 60, 'https://tinyurl.com/2hm8fxnf', 'Jersey'),
-('Boston Celtics KIT', 60, 'https://tinyurl.com/26w6ym9u', 'Jersey'),
-('Barcelona KIT', 60, 'https://tinyurl.com/5n9bxera', 'Jersey'),
-('Golden State Warriors KIT', 80, 'https://tinyurl.com/2p8ys3p6', 'Jersey'),
-('Bayern Munchen KIT', 75, 'https://tinyurl.com/2p8bh8nj', 'Jersey'),
-('76 Sixers KIT', 80, 'https://tinyurl.com/yuckte2k', 'Jersey'),
-('As Roma KIT', 50, 'https://tinyurl.com/mvdcpb48', 'Jersey'),
-('Lebron 19', 110, 'https://tinyurl.com/mr3fsjt8', 'Shoes'),
-('Air Jordan 11', 450, 'https://tinyurl.com/mr3fsjt8', 'Shoes'),
-('Nike HyperVenom', 220, 'https://tinyurl.com/c62v4cwt', 'Shoes'),
-('Legendary Jordan 1', 437500, 'https://tinyurl.com/3ff4u74b', 'Shoes'),
-('Adidas Predator', 300, 'https://tinyurl.com/2p9bm86m', 'Shoes'),
-('Kyrie 6', 120, 'https://tinyurl.com/bdhnddbw', 'Shoes'),
-('Lotto', 100, 'https://tinyurl.com/2p8t8ue2', 'Shoes'),
-('Nike Phantom', 130, 'https://tinyurl.com/4mycspk2', 'Shoes');
+INSERT INTO store (name, price, image, category, quantity ) VALUES 
+('Manchester United KIT', 89, 'https://tinyurl.com/y599xw69', 'Jersey', 1),
+('Lakers KIT', 80, 'https://tinyurl.com/p76tw2ea', 'Jersey', 1),
+('Madrid KIT', 78, 'https://tinyurl.com/37uc44s4', 'Jersey', 1),
+('Brooklyn Nets Kit', 86, 'https://tinyurl.com/5t4w4fdh', 'Jersey', 1),
+('Liverpool KIT', 60, 'https://tinyurl.com/2hm8fxnf', 'Jersey', 1),
+('Boston Celtics KIT', 60, 'https://tinyurl.com/26w6ym9u', 'Jersey', 1),
+('Barcelona KIT', 60, 'https://tinyurl.com/5n9bxera', 'Jersey', 1),
+('Golden State Warriors KIT', 80, 'https://tinyurl.com/2p8ys3p6', 'Jersey', 1),
+('Bayern Munchen KIT', 75, 'https://tinyurl.com/2p8bh8nj', 'Jersey', 1),
+('76 Sixers KIT', 80, 'https://tinyurl.com/yuckte2k', 'Jersey', 1),
+('As Roma KIT', 50, 'https://tinyurl.com/mvdcpb48', 'Jersey', 1),
+('Lebron 19', 110, 'https://tinyurl.com/mr3fsjt8', 'Shoes', 1),
+('Air Jordan 11', 450, 'https://tinyurl.com/mr3fsjt8', 'Shoes', 1),
+('Nike HyperVenom', 220, 'https://tinyurl.com/c62v4cwt', 'Shoes', 1),
+('Legendary Jordan 1', 437500, 'https://tinyurl.com/3ff4u74b', 'Shoes', 1),
+('Adidas Predator', 300, 'https://tinyurl.com/2p9bm86m', 'Shoes', 1),
+('Kyrie 6', 120, 'https://tinyurl.com/bdhnddbw', 'Shoes', 1),
+('Lotto', 100, 'https://tinyurl.com/2p8t8ue2', 'Shoes', 1),
+('Nike Phantom', 130, 'https://tinyurl.com/4mycspk2', 'Shoes', 1);

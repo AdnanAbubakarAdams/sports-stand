@@ -30,8 +30,39 @@
     padding: 16px;
   }
   
-  @media screen and (max-width: 960px) {
-    .fa-caret-down {
-      display: none;
-    }
+  
+
+  /* Main Style */
+  .products {
+    display: grid;
+    grid-template-areas: 
+        "h h h"
+        "s s s"
+        "s s s";
+}
+
+.items {
+    display: grid;
+    grid-area: s;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    column-gap: 2em;
+    row-gap: 2em;
+    text-align: center;
+}
+
+
+.products li {
+    list-style: none;
+    border: 1px solid black;
+}
+.products a {
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 960px) {
+  .fa-caret-down {
+    display: none;
   }
+}

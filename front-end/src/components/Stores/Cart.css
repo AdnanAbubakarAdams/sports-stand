@@ -1,0 +1,13 @@
+.img {
+    width:300px;
+    height: 300px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-bottom: 2px solid skyblue;
+    padding-bottom: 5px;
+  }

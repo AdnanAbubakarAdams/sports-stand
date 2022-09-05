@@ -6,8 +6,14 @@ import "./Stores.css";
 // Importing our API
 const API = process.env.REACT_APP_API_URL;
 
-const Stores = () => {
+const Stores = ({ handleClick }) => {
   const [products, setProducts] = useState([]);
+  // const [cart, setCart] = useState([]);
+
+  // const handleClick = (product) => {
+  //   if (cart.indexOf(product) !== -1) return;
+  //   setCart([...cart, product])
+  // }
 
   useEffect(() => {
     axios
@@ -16,12 +22,12 @@ const Stores = () => {
       .catch((c) => console.warn("catch", c));
   }, []);
   return (
-    <div className="products-div">
+    <div className="products">
       <ul className="items">
         {products.map((product) => {
           return (
-            <li>
-          <Store key={product.id} product={product} />
+            <li key={product.id}>
+          <Store key={product.id} product={product} handleClick={handleClick}/>
           </li>
           )
         })}

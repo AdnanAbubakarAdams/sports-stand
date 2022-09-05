@@ -34,5 +34,6 @@ CREATE TABLE store (
     name TEXT NOT NULL,
     price INTEGER,
     image TEXT,
-    category TEXT
+    category TEXT,
+    quantity INTEGER
 )

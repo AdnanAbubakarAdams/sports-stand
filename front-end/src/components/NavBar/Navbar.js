@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { Button } from "../Button/Button";
@@ -6,7 +6,7 @@ import SoccerDropdown from "../Soccer/SoccerDropdown";
 import StoresDropdown from "../Stores/StoresDropdown";
 import BasketBallDropdown from "../BasketBall/BasketBallDropdown";
 
-const Navbar = () => {
+const Navbar = ({ cartNum }) => {
   // click for the dropdown
   const [click, setClick] = useState(false);
   // states for each drop-down
@@ -120,6 +120,14 @@ const Navbar = () => {
             </Link>
             {storesdropdown && <StoresDropdown />}
           </li>
+          <Link to="/cart">
+          <li className="cart-icon">
+            <span>
+            <i className="fas fa-cart-arrow-down"></i>
+            </span>
+            <span>{cartNum}</span>
+          </li>
+          </Link>
         </ul>
 
         <Button />
