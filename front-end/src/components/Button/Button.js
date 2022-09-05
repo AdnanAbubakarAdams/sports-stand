@@ -9,7 +9,7 @@ export const Button = () => {
         <button className='btn'>ADD IDOL</button>
       </Link>
 
-      <Link to="sing-up">
+      <Link to="/sing-up">
         <button className="btn">SIGN IN</button>
       </Link>
       <Link to="sing-in">

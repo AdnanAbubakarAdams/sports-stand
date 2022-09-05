@@ -3,7 +3,9 @@ import './Soccer.css';
 
 const Soccer = () => {
   return (
-    <div>Soccer</div>
+    <div>
+      
+    </div>
   )
 }
 

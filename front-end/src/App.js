@@ -13,6 +13,8 @@ import Index from './pages/Index';
 import New from './pages/New';
 import Show from './pages/Show';
 import Leagues from './pages/Leagues';
+import Home from './pages/Home';
+import Footer from './components/Footer/Footer';
 // import StoresIndex from './pages/StoresIndex';
 
 function App() {
@@ -37,6 +39,7 @@ function App() {
     <Router>
       <Navbar cartNum={cart.length}/>
       <Routes>
+        <Route path="/" element={<Home/>} />
         <Route path="/players" element={<Index />} />
         <Route path="/players/new" element={<New/>} />
         <Route path="/players/:id" element={<Show/>} />
@@ -46,6 +49,7 @@ function App() {
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange}/>} />
 
       </Routes>
+      <Footer/>
     </Router>
   );
 }

@@ -32,8 +32,8 @@ const Cart = ({ cart, setCart, handleChange}) => {
 
   useEffect(() => {
     handlePrice();
-  },[...cart, setCart]);
-  
+  });
+
   return (
     <article className="cart-article">
       {cart.map((product) => (

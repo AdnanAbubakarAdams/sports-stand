@@ -74,8 +74,7 @@ const Navbar = ({ cartNum }) => {
     <>
       <nav className="navbar">
         <Link to="/" className="nav-badge" onClick={closeMobileMenu}>
-          SPORTSTAND
-          {/* <i class="fa-solid fa-fish-bones"></i> */}
+          ADDYSPORTS 
         </Link>
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? "fas fa-times" : "fas fa-bars"} />
