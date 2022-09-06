@@ -10,6 +10,7 @@ const Player = ({ player }) => {
           <img src={player.image} alt={player.is_idol} width='400px' height='400px'/>
         </span>
         <br/>
+        </Link>
         <h3>
           {player.is_idol ? (
             <span>🫀</span>
@@ -18,7 +19,6 @@ const Player = ({ player }) => {
           )}
           {player.name}
         </h3>
-        </Link>
     </div>
   )
 }

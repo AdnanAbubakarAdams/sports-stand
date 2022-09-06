@@ -25,6 +25,7 @@ h1 {
   text-align: center;
 }
 
+/* All Cards */
 .card-holder {
   display: flex;
   flex-flow: column;
@@ -43,6 +44,7 @@ h1 {
   margin-bottom: 24px;
 }
 
+/* for template */
 .carditem {
   display: flex;
   flex: 1;
@@ -84,7 +86,7 @@ h1 {
   font-size: 12px;
   font-weight: 700;
   color: #fff;
-  background-color: #1f98f4;
+  background-color: #9E37EC;
   box-sizing: border-box;
 }
 
@@ -117,6 +119,8 @@ h1 {
   line-height: 24px;
 }
 
+
+/* media queries */
 @media only screen and (min-width: 1200px) {
   .content__blog__container {
     width: 84%;

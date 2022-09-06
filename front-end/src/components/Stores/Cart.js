@@ -57,8 +57,13 @@ const Cart = ({ cart, setCart, handleChange}) => {
         <span>Cart Total</span>
         <span>${price}</span>
       </div>
+      <div className="checkout">
+        <button className="check1">CHECKOUT <i class="fas fa-credit-card"></i></button>
+        <button className="check2">APPLE PAY  <i class="fab fa-apple-pay"></i></button>
+      </div>
     </article>
   );
 };
-
+{/* <i class="fa-solid fa-credit-card"></i> */}
+{/* <i class="fas fa-arrow-right"></i> */}
 export default Cart;

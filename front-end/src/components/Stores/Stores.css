@@ -54,15 +54,30 @@
 
 .products li {
     list-style: none;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .products a {
   text-decoration: none;
 }
-
-
-@media screen and (max-width: 960px) {
-  .fa-caret-down {
-    display: none;
+.store img {
+  position: relative;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  border-radius: 10px; 
+  object-fit:cover;
+  overflow: hidden;
+}
+.store button {
+  padding: 5px;
+  
+}
+@media only screen and (min-width: 1024px) {
+  .items li {
+    display: flex;
   }
 }
+
+/* @media screen and (max-width: 960px) {
+  button {
+    
+  }
+} */

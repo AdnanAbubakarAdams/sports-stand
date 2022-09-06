@@ -1,5 +1,14 @@
 .player a {
-    text-decoration: none;
-    /* border: 1px solid black; */
+  text-decoration: none;
 }
-
+.player img {
+  position: relative;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  border-radius: 10px; 
+  object-fit:cover;
+  overflow: hidden;
+  
+}
+.player img:hover {
+    transform: scale(1.1);
+}

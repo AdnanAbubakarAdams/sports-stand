@@ -10,11 +10,11 @@ const Store = ({ product, handleClick }) => {
           <img src={product.image} alt="#" width='400px' height='400px'/>
         </span>
         <br/>
+        </Link>
         <h3>
           {product.name}
         </h3>
         <h4>Price-${product.price}</h4>
-        </Link>
         <button onClick={() => handleClick(product)}>Add To Cart</button>
     </div>
   )
