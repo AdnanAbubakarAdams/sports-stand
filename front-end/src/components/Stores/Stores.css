@@ -9,12 +9,12 @@
   }
   
   .menu li {
-    background: #1888ff;
+    background: #9E37EC;
     cursor: pointer;
   }
   
   .menu li:hover {
-    background: #5cabff;
+    background: #C595E9;
   }
   
   .clicked {

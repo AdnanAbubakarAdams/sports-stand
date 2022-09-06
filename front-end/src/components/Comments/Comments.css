@@ -1,15 +1,33 @@
 .comments {
-    background-color: whitesmoke;
-    padding: 1em;
-    box-shadow: 2px 2px 4px silver;
+  /* background-color: whitesmoke; */
+  margin-top: 50px;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  padding: 1em;
+  box-shadow: 2px 2px 4px silver;
+  text-align: center;
 }
 
 .comments > div {
-    padding: 1em;
-    box-shadow: 0px 0px 2px silver;
-    background-color: ghostwhite;
+    
+    background: white;
+    background: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+        );
+        border-radius: 1rem;
+        z-index: 2;
+        backdrop-filter: blur(2rem);
+        padding: 1em;
 }
-
-.comments div:nth-child(odd) {
-    background-color: aliceblue;
-  }
+textarea[type="text"] {
+  margin: 0;
+  width: 600px;
+  /* height: 40px; */
+  padding: 5px;
+}
+.comment button {
+  padding: 5px;
+  border: none;
+  width: 80px;
+}

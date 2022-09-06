@@ -1,5 +1,6 @@
 .New {
     text-align: center;
+    height: 83vh;
 }
 
 input[type="text"] {
@@ -19,5 +20,5 @@ input[type="number"] {
 input[type="submit"] {
     margin: 0;
     width: 150px;
-    /* padding: 10px; */
+    padding: 10px;
 }

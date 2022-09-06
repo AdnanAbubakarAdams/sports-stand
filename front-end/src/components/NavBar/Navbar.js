@@ -119,7 +119,7 @@ const Navbar = ({ cartNum }) => {
             </Link>
             {storesdropdown && <StoresDropdown />}
           </li>
-          <Link to="/cart">
+          <Link to="/cart" onClick={closeMobileMenu}>
           <li className="cart-icon">
             <span>
             <i className="fas fa-cart-arrow-down"></i>

@@ -51,6 +51,7 @@ const EditPlayer = () => {
   }
   return (
     <div className="Edit-player">
+      <section>
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name:</label>
       <br/>
@@ -140,6 +141,7 @@ const EditPlayer = () => {
       <br />
       <input type="submit" />
     </form>
+    </section>
   </div>
   )
 }

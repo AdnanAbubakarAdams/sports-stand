@@ -8,7 +8,7 @@ const Comment = ({ comments1, handleDelete, handleSubmit }) => {
     toggleEditForm(!viewEditForm)
   }
   return (
-    <div className='comments'>
+    <div className='comment'>
       <button onClick={toggleView}>Edit</button>
       { viewEditForm ? (
         <CommentForm

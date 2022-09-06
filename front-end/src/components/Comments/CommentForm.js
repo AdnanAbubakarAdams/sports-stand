@@ -53,14 +53,6 @@ const CommentForm = ( props ) => {
           placeholder="Name"
           required
         />
-        {/* <label htmlFor="title">Comment:</label>
-        <input
-          id="comment"
-          type="text"
-          required
-          value={comments.comment}
-          onChange={handleChange}
-        /> */}
         <br/>
         <label htmlFor="rating">Rating:</label>
         <br/>

@@ -17,10 +17,6 @@
     font-size: 2rem;
   }
   
-  .fa-fish-bones {
-    margin-left: 0.5rem;
-    font-size: 1.6rem;
-  }
   
   .nav-menu {
     display: flex;
@@ -46,7 +42,7 @@
   }
   
   .nav-links:hover {
-    background-color: #1888ff;
+    background-color: #9E37EC;
     border-radius: 4px;
     transition: all 0.2s ease-out;
   }
@@ -108,7 +104,7 @@
     }
   
     .nav-links:hover {
-      background-color: #1888ff;
+      background-color: #9E37EC;
       border-radius: 0;
     }
   
@@ -141,7 +137,7 @@
       margin: 2rem auto;
       border-radius: 4px;
       width: 80%;
-      background: #1888ff;
+      background: #9E37EC;
       text-decoration: none;
       color: #fff;
       font-size: 1.5rem;
@@ -149,7 +145,7 @@
   
     .nav-links-mobile:hover {
       background: #fff;
-      color: #1888ff;
+      color: #9E37EC;
       transition: 250ms;
     }
   
