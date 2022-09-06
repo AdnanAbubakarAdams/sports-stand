@@ -24,7 +24,62 @@
 }
 
 
+/* STANDINGS CSS */
+.standings {
+  
+    /* display: flex; */
+    height: 165vh;
+    align-items: center;
+    justify-content: center;
+  
 
+}
+.club-crest {
+  width: 25px;
+}
+select {
+  margin: 15px;
+  padding: 8px;
+  font-size: 15px;
+}
+.league-ranks {
+  text-align: center;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: aquamarine;
+  margin: 20px 0;
+
+}
+.ranks {
+  margin: 20px 0;
+  cursor: pointer;
+}
+.ranks:hover {
+  transform: scale(1.1);
+}
+
+/* NBA */
+.nba-div {
+  display: grid;
+  grid-template-areas: 
+  "l l l"
+  "m m m"
+  "f f f";
+}
+.nba {
+  display: grid;
+  grid-area: m;
+  grid-template-columns: repeat(5, 1fr);
+}
+.nba li {
+  list-style: none;
+  border: 1px solid black;
+  margin: 15px;
+  column-gap: 10px;
+  text-align: center;
+}
 
 
 

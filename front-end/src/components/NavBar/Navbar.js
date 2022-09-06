@@ -90,7 +90,7 @@ const Navbar = ({ cartNum }) => {
             onMouseEnter={hadndleSoc}
             onMouseLeave={handleSocc}
           >
-            <Link to="/soccer" className="nav-links" onClick={closeMobileMenu}>
+            <Link to="#" className="nav-links" onClick={closeMobileMenu}>
               SOCCER
             </Link>
             {soccerdropdown && <SoccerDropdown />}
@@ -101,7 +101,7 @@ const Navbar = ({ cartNum }) => {
             onMouseLeave={handleBask}
           >
             <Link
-              to="/basketball"
+              to="#"
               className="nav-links"
               onClick={closeMobileMenu}
             >

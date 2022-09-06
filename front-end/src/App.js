@@ -13,6 +13,8 @@ import Index from './pages/Index';
 import New from './pages/New';
 import Show from './pages/Show';
 import Leagues from './pages/Leagues';
+import Standings from './pages/Standings';
+import Nba from './pages/Nba';
 import Home from './pages/Home';
 import Footer from './components/Footer/Footer';
 // import StoresIndex from './pages/StoresIndex';
@@ -45,6 +47,8 @@ function App() {
         <Route path="/players/:id" element={<Show/>} />
         <Route path="/players/:id/edit" element={<Edit/>}/>
         <Route path="/leagues" element={<Leagues/>} />
+        <Route path="/standings" element={<Standings/>} />
+        <Route path="/nba" element={<Nba/>}/>
         <Route path="/stores" element={<Stores handleClick={handleClick}/>} />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange}/>} />
 
