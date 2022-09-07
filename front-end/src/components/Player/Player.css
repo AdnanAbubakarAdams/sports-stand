@@ -2,7 +2,7 @@
   text-decoration: none;
 }
 .player img {
-  position: relative;
+  /* position: relative; */
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
   border-radius: 10px; 
   object-fit:cover;
@@ -10,5 +10,5 @@
   
 }
 .player img:hover {
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }

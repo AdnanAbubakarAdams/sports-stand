@@ -60,7 +60,7 @@
   text-decoration: none;
 }
 .store img {
-  position: relative;
+  /* position: relative; */
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
   border-radius: 10px; 
   object-fit:cover;

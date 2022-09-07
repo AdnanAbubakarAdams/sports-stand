@@ -8,6 +8,7 @@ const API = process.env.REACT_APP_API_URL;
 
 const Stores = ({ handleClick }) => {
   const [products, setProducts] = useState([]);
+  // const [category, setCategory] = useState("all");
   // const [cart, setCart] = useState([]);
 
   // const handleClick = (product) => {
@@ -21,6 +22,15 @@ const Stores = ({ handleClick }) => {
       .then((response) => setProducts(response.data))
       .catch((c) => console.warn("catch", c));
   }, []);
+
+  // const sortbyJersey = (e) => {
+  //   e.preventDefault()
+  //   if (e.target.value.category === "jersey"){
+  //     products.sort((a, b) => {
+  //       return a.product.category - 
+  //     })
+  //   }
+  // }
   return (
     <div className="products">
       <ul className="items">

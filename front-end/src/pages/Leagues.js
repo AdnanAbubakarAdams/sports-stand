@@ -11,7 +11,7 @@ const Leagues = () => {
       .then((response) => {
         setLeagueData(response.data.data);
       })
-      .catch((c) => console.warn("catch", c));
+      .catch((error) => console.log(error));
   }, []);
   return (
     <ul className="leagues">
