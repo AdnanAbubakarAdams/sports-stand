@@ -1,9 +1,9 @@
 \c sports_stand_dev;
 
 INSERT INTO players (name, age, team, nationality, position, prefered, image, is_idol) VALUES 
-('Cristiano Ronaldo', 37, 'Manchester United', 'Portugal', 'Forward', 'Right', 'https://tinyurl.com/ysy8k9e5', true),
+('Cristiano Ronaldo', 37, 'Manchester United', 'Portugal', 'Forward', 'Right', 'https://tinyurl.com/2d5yet2b', true),
 ('Lebron James', 37, 'Lakers', 'USA', 'Forward', 'Right', 'https://tinyurl.com/2p9b9fxs', true),
-('Lionel Messi', 35, 'Paris Saint-Germain', 'Argentina', 'Right Winger', 'Left', 'https://tinyurl.com/28y2ycth', false),
+('Lionel Messi', 35, 'Paris Saint-Germain', 'Argentina', 'Right Winger', 'Left', 'https://tinyurl.com/59f8tc54', false),
 ('Anthony Davis', 30, 'Lakers', 'USA', 'Center', 'Right', 'https://tinyurl.com/2cxktj8k', false),
 ('Bruno Fernandez', 27, 'Manchester United', 'Portugal', 'Attacking Midfielder', 'Right', 'https://tinyurl.com/2brx9wd4', false),
 ('Kevin Durant', 30, 'Brooklyn Nets', 'USA', 'Guard', 'Right', 'https://tinyurl.com/bdd8bpsp', false),
@@ -35,14 +35,14 @@ INSERT INTO store (name, price, image, category, quantity ) VALUES
 ('Boston Celtics KIT', 60, 'https://tinyurl.com/26w6ym9u', 'Jersey', 1),
 ('Barcelona KIT', 60, 'https://tinyurl.com/5n9bxera', 'Jersey', 1),
 ('Golden State Warriors KIT', 80, 'https://tinyurl.com/2p8ys3p6', 'Jersey', 1),
-('Bayern Munchen KIT', 75, 'https://tinyurl.com/2p8bh8nj', 'Jersey', 1),
+('Bayern Munchen KIT', 75, 'https://tinyurl.com/5n7shxsp', 'Jersey', 1),
 ('76 Sixers KIT', 80, 'https://tinyurl.com/yuckte2k', 'Jersey', 1),
-('As Roma KIT', 50, 'https://tinyurl.com/mvdcpb48', 'Jersey', 1),
-('Lebron 19', 110, 'https://tinyurl.com/mr3fsjt8', 'Shoes', 1),
-('Air Jordan 11', 450, 'https://tinyurl.com/mr3fsjt8', 'Shoes', 1),
+('As Roma KIT', 50, 'https://tinyurl.com/296uy588', 'Jersey', 1),
+('Lebron 19', 110, 'https://tinyurl.com/5yk7r99m', 'Shoes', 1),
+('Air Jordan 11', 450, 'https://tinyurl.com/3kaua8ps', 'Shoes', 1),
 ('Nike HyperVenom', 220, 'https://tinyurl.com/c62v4cwt', 'Shoes', 1),
 ('Legendary Jordan 1', 437500, 'https://tinyurl.com/3ff4u74b', 'Shoes', 1),
 ('Adidas Predator', 300, 'https://tinyurl.com/2p9bm86m', 'Shoes', 1),
 ('Kyrie 6', 120, 'https://tinyurl.com/bdhnddbw', 'Shoes', 1),
 ('Lotto', 100, 'https://tinyurl.com/2p8t8ue2', 'Shoes', 1),
-('Nike Phantom', 130, 'https://tinyurl.com/4mycspk2', 'Shoes', 1);
+('Nike Phantom', 130, 'https://tinyurl.com/yckkw62s', 'Shoes', 1);

@@ -11,7 +11,7 @@ const Footer = () => {
         </Link>
         <p>© 2022 ADDYSPORTS®</p>
         <div className='my-links'>
-          <Link to="https://www.linkedin.com/" class='social-icon-link linkedin' target='_blank' aria-label='LinkedIn'>
+          <Link to={{pathname:"https://www.linkedin.com/"}} class='social-icon-link linkedin' target='_blank' aria-label='LinkedIn'>
             <i class='fab fa-linkedin'/>
           </Link>
           <Link to="/" class='social-icon-link github' target='_blank' aria-label='GitHub'>
