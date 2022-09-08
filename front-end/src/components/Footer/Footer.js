@@ -11,15 +11,15 @@ const Footer = () => {
         </Link>
         <p>© 2022 ADDYSPORTS®</p>
         <div className='my-links'>
-          <Link to="https://www.linkedin.com/" class='social-icon-link linkedin' target='_blank' aria-label='LinkedIn'>
+          <a href="https://www.linkedin.com/" class='social-icon-link linkedin' target='_blank' aria-label='LinkedIn'>
             <i class='fab fa-linkedin'/>
-          </Link>
+          </a>
           <a href="https://github.com/AdnanAbubakarAdams" class='social-icon-link github' target='_blank' aria-label='GitHub'>
             <i class='fab fa-github'/>
           </a>
-          <Link to="/" class='social-icon-link twitter' target='_blank' aria-label='twitter'>
+          <a to="/" class='social-icon-link twitter' target='_blank' aria-label='twitter'>
             <i class='fab fa-twitter'/>
-          </Link>
+          </a>
         </div>
 
       </section>
