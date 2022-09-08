@@ -11,12 +11,12 @@ const Footer = () => {
         </Link>
         <p>© 2022 ADDYSPORTS®</p>
         <div className='my-links'>
-          <Link to={{pathname:"https://www.linkedin.com/"}} class='social-icon-link linkedin' target='_blank' aria-label='LinkedIn'>
+          <Link to="https://www.linkedin.com/" class='social-icon-link linkedin' target='_blank' aria-label='LinkedIn'>
             <i class='fab fa-linkedin'/>
           </Link>
-          <Link to="/" class='social-icon-link github' target='_blank' aria-label='GitHub'>
+          <a href="https://github.com/AdnanAbubakarAdams" class='social-icon-link github' target='_blank' aria-label='GitHub'>
             <i class='fab fa-github'/>
-          </Link>
+          </a>
           <Link to="/" class='social-icon-link twitter' target='_blank' aria-label='twitter'>
             <i class='fab fa-twitter'/>
           </Link>
