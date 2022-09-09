@@ -7,6 +7,8 @@ import Cart from './components/Stores/Cart';
 import Stores from './components/Stores/Stores';
 // import BasketBall from './components/BasketBall/BasketBall';
 
+import { UserProvider } from './Providers/UserProvider';
+
 // PAGES 
 import Edit from './pages/Edit';
 import Index from './pages/Index';
@@ -38,6 +40,7 @@ function App() {
 
   
   return (
+    <UserProvider>
     <Router>
       <Navbar cartNum={cart.length}/>
       <Routes>
@@ -55,6 +58,7 @@ function App() {
       </Routes>
       <Footer/>
     </Router>
+    </UserProvider>
   );
 }
 
