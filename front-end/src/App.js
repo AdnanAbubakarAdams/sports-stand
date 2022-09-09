@@ -5,8 +5,10 @@ import './App.css';
 import Navbar from './components/NavBar/Navbar';
 import Cart from './components/Stores/Cart';
 import Stores from './components/Stores/Stores';
+import { Login } from './components/Login/Login';
 // import BasketBall from './components/BasketBall/BasketBall';
 
+// PROVIDERS --->
 import { UserProvider } from './Providers/UserProvider';
 
 // PAGES 
@@ -52,6 +54,7 @@ function App() {
         <Route path="/leagues" element={<Leagues/>} />
         <Route path="/standings" element={<Standings/>} />
         <Route path="/nba" element={<Nba/>}/>
+        <Route path="/login" element={<Login/>}/>
         <Route path="/stores" element={<Stores handleClick={handleClick}/>} />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange}/>} />
 

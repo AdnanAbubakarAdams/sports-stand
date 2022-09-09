@@ -21,7 +21,7 @@ export const UserProvider = (props) => {
     }, [])
     return (
         <>
-        // this is where we render the user state with context provider
+        {/* // this is where we render the user state with context provider */}
         <UserContext.Provider value={user}>
             <div>{ props.children }</div>
         </UserContext.Provider>
