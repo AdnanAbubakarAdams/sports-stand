@@ -11,13 +11,13 @@ const Footer = () => {
         </Link>
         <p>© 2022 ADDYSPORTS®</p>
         <div className='my-links'>
-          <a href="https://www.linkedin.com/" class='social-icon-link linkedin' target='_blank' aria-label='LinkedIn'>
+          <a href="https://www.linkedin.com/" class='social-icon-link linkedin' target='_blank' rel="noreferrer" aria-label='LinkedIn'>
             <i class='fab fa-linkedin'/>
           </a>
-          <a href="https://github.com/AdnanAbubakarAdams" class='social-icon-link github' target='_blank' aria-label='GitHub'>
+          <a href="https://github.com/AdnanAbubakarAdams" class='social-icon-link github' target='_blank'  rel="noreferrer" aria-label='GitHub'>
             <i class='fab fa-github'/>
           </a>
-          <a to="/" class='social-icon-link twitter' target='_blank' aria-label='twitter'>
+          <a herf="/" class='social-icon-link twitter' target='_blank'  rel="noreferrer" aria-label='twitter'>
             <i class='fab fa-twitter'/>
           </a>
         </div>
