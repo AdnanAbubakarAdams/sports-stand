@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../Providers/UserProvider";
-import { signInWithGoogle } from "../../Services/Firebase";
+import { signInWithGoogle, signOut } from "../../Services/Firebase";
 
 
 export const Login = () => {
@@ -10,11 +10,15 @@ export const Login = () => {
 
     useEffect(() => {
         if (user) {
-            useNavigate("/")
+            navigate("/");
         }
     }, [user, navigate])
-    return (
 
+    return (
+        <div>
+            <button onClick={signInWithGoogle}> Sign in with google </button>
+            <button onClick={signOut}> Sign Out </button>
+        </div>
     )
     
 }
