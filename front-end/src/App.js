@@ -5,7 +5,6 @@ import './App.css';
 import Navbar from './components/NavBar/Navbar';
 import Cart from './components/Stores/Cart';
 import Stores from './components/Stores/Stores';
-import { Login } from './components/Login/Login';
 // import BasketBall from './components/BasketBall/BasketBall';
 
 // PROVIDERS --->
@@ -21,7 +20,9 @@ import Standings from './pages/Standings';
 import Nba from './pages/Nba';
 import Home from './pages/Home';
 import Footer from './components/Footer/Footer';
-// import StoresIndex from './pages/StoresIndex';
+import { LoginPage } from './pages/LoginPage';
+import { LoggedInPage} from  './pages/LoggedInPage'
+
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -54,7 +55,8 @@ function App() {
         <Route path="/leagues" element={<Leagues/>} />
         <Route path="/standings" element={<Standings/>} />
         <Route path="/nba" element={<Nba/>}/>
-        <Route path="/login" element={<Login/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/loggedInPage" element={<LoggedInPage/>}/>
         <Route path="/stores" element={<Stores handleClick={handleClick}/>} />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange}/>} />
 
