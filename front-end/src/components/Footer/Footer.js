@@ -11,7 +11,7 @@ const Footer = () => {
         </Link>
         <p>© 2022 ADDYSPORTS®</p>
         <div className='my-links'>
-          <a href="https://www.linkedin.com/" class='social-icon-link linkedin' target='_blank' rel="noreferrer" aria-label='LinkedIn'>
+          <a href="https://www.linkedin.com/in/adnan-abubakar-adams/" class='social-icon-link linkedin' target='_blank' rel="noreferrer" aria-label='LinkedIn'>
             <i class='fab fa-linkedin'/>
           </a>
           <a href="https://github.com/AdnanAbubakarAdams" class='social-icon-link github' target='_blank'  rel="noreferrer" aria-label='GitHub'>
