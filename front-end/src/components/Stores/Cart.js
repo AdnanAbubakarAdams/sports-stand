@@ -61,6 +61,9 @@ const Cart = ({ cart, setCart, handleChange}) => {
         <button className="check1">CHECKOUT <i class="fas fa-credit-card"></i></button>
         <button className="check2">APPLE PAY  <i class="fab fa-apple-pay"></i></button>
       </div>
+      <div className="check3-div">
+        <button className="check3">CONNECT WALLET <i class="fas fa-wallet"></i></button>
+      </div>
     </article>
   );
 };

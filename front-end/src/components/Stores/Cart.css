@@ -87,6 +87,18 @@
     font-size: 18px;
     color: white;
   }
+  .check3-div {
+    margin-top: 40px;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+  }
+  .check3 {
+    padding: 15px;
+    border-radius: 8px;
+    color: aliceblue;
+    background: gray;
+  }
 
   .cart-total {
     display: flex;
