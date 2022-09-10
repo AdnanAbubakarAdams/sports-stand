@@ -13,7 +13,7 @@ const NewPlayer = () => {
   const addPlayer = (newPlayer) => {
     axios.post(`${API}/players`, newPlayer)
     .then(() => {
-      navigate(`/snacks`)
+      navigate(`/players`)
     },
     (error) => console.error(error)
     )

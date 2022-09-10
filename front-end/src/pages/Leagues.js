@@ -9,6 +9,7 @@ const Leagues = () => {
     axios
       .get("https://api-football-standings.azharimm.site/leagues")
       .then((response) => {
+        // console.log(response.data.data)
         setLeagueData(response.data.data);
       })
       .catch((error) => console.log(error));
