@@ -10,11 +10,11 @@ export const Button = () => {
       </Link>
 
       <Link to="/login">
-        <button className="btn">SIGN IN</button>
+        <button className="btn">SIGN IN WITH GOOGLE</button>
       </Link>
-      <Link to="sing-in">
+      {/* <Link to="/login">
         <button className="btn">SIGN UP</button>
-      </Link>
+      </Link> */}
     </div>
   );
 };

@@ -1,0 +1,53 @@
+/* LOGIN CSS */
+.login {
+    text-align: center;
+    height: 80vh;
+    margin-top: 50px;
+    
+}
+.login button {
+    padding: 20px;
+    border-radius: 12px;
+    
+}
+.log1 {
+    margin-right: 10px;
+    background: #111;
+    color: white;
+    cursor: pointer;
+    border: none;  
+}
+
+.log1:hover {
+    box-shadow: 6px 6px 20px #9E37EC;
+}
+.log2 {
+    margin-left: 10px;
+    background: #111;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.log2:hover {
+    box-shadow: 6px 6px 20px #9E37EC;
+}
+
+/* LOGINPAGE CSS */
+.logged-in {
+    height: 85vh;
+    text-align: center;
+}
+.logged-in img {
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+
+.logged-in h4 {
+    margin-bottom: 10px;
+}
+.logged-in button {
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    background: #111;
+}

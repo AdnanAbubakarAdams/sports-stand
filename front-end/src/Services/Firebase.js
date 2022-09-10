@@ -33,7 +33,7 @@ const googleProvider = new GoogleAuthProvider();
 export const signInWithGoogle =  () => {
     try {
   //the signInWithPopUp() method accepts ANY provider we create. This is all our authentication logic
-    signInWithPopup(googleProvider, auth).then((res) => {
+    signInWithPopup(auth, googleProvider).then((res) => {
     const user = res.user;
     console.log(user)
   })
