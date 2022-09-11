@@ -27,9 +27,9 @@ const PlayerDetails = () => {
     .catch((c) => console.error("catch", c))
   }
   // THE METHOD 
-  // const handleDelete = () => {
-  //   deleteIdol()
-  // }
+  const handleDelete = () => {
+    deleteIdol()
+  }
 
   return (
     <div>
@@ -58,14 +58,14 @@ const PlayerDetails = () => {
             <button className="btn1">BACK</button>
           </Link>
         </div>
-        {/* <div>
+        <div>
           <Link to={`/players/${id}/edit`}>
             <button className="btn2">EDIT</button>
           </Link>
         </div>
         <div>
           <button className="btn3" onClick={handleDelete}>DELETE</button>
-        </div> */}
+        </div>
       </div>
       <Comments />
 
