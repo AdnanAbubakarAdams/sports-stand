@@ -67,6 +67,6 @@ const Cart = ({ cart, setCart, handleChange}) => {
     </article>
   );
 };
-{/* <i class="fa-solid fa-credit-card"></i> */}
-{/* <i class="fas fa-arrow-right"></i> */}
+
+
 export default Cart;
