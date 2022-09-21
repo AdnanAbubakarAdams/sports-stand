@@ -22,6 +22,7 @@ import Home from './pages/Home';
 import Footer from './components/Footer/Footer';
 import { LoginPage } from './pages/LoginPage';
 import { LoggedInPage} from  './pages/LoggedInPage'
+import FourOFour from './pages/FourOFour';
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
         <Route path="/loggedInPage" element={<LoggedInPage/>}/>
         <Route path="/stores" element={<Stores handleClick={handleClick}/>} />
         <Route path="/cart" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange}/>} />
+        <Route path="*" element={<FourOFour/>} />
 
       </Routes>
       <Footer/>

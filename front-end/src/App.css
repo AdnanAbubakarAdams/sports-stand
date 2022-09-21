@@ -81,6 +81,21 @@ select {
   text-align: center;
 }
 
+/* error-page */
+.error-page {
+  text-align: center;
+  height: 83vh;
+}
+.error-page h1 {
+  font-size: 80px;
+  font-weight: bold;
+}
+.error-page button {
+  /* margin: 0; */
+  width: 150px;
+  padding: 10px;
+}
+
 
 
 
