@@ -1,5 +1,8 @@
 \c sports_stand_dev;
 
+INSERT INTO users (uuid, firstname, lastname, dob, city, state, zipcode, phonenumber, email, verified, profilephoto) VALUES
+() RETURNING *;
+
 INSERT INTO players (name, age, team, nationality, position, prefered, image, is_idol) VALUES 
 ('Cristiano Ronaldo', 37, 'Manchester United', 'Portugal', 'Forward', 'Right', 'https://tinyurl.com/2d5yet2b', true),
 ('Lebron James', 37, 'Lakers', 'USA', 'Forward', 'Right', 'https://tinyurl.com/2p9b9fxs', true),

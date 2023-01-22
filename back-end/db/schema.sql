@@ -3,6 +3,22 @@ CREATE DATABASE sports_stand_dev;
 
 \c sports_stand_dev;
 
+CREATE TABLE users (
+    uuid TEXT PRIMARY KEY UNIQUE NOT NULL,
+    firstname TEXT NOT NULL,
+    lastname TEXT NOT NULL,
+    dob TEXT NOT NULL,
+    city TEXT NOT NULL,
+    state TEXT NOT NULL,
+    zipcode VARCHAR(5) NOT NULL,
+    phonenumber VARCHAR(10) NOT NULL,
+    email TEXT NOT NULL,
+    verified BOOLEAN default false,
+    profilephoto TEXT
+)
+
+DROP TABLE IF EXISTS players
+
 CREATE TABLE players (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
