@@ -8,6 +8,7 @@ const app = express();
 // CONTROLLERS
 const playersController = require("./controllers/playersController.js");
 const storesController = require("./controllers/storesController.js");
+const usersController = require("./controllers/usersController");
 // const commentsController = require("./controllers/commentsController.js")
 
 
@@ -16,8 +17,9 @@ const storesController = require("./controllers/storesController.js");
 app.use(cors());
 app.use(express.json());
 
-app.use("/players", playersController)
+app.use("/players", playersController);
 app.use("/products", storesController);
+app.use("/users", usersController);
 // app.use("/comments", commentsController)
 
 
