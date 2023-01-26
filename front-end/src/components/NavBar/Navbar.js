@@ -6,7 +6,7 @@ import SoccerDropdown from "../Soccer/SoccerDropdown";
 import StoresDropdown from "../Stores/StoresDropdown";
 import BasketBallDropdown from "../BasketBall/BasketBallDropdown";
 
-const Navbar = ({ cartNum }) => {
+const Navbar = ({ cartNum, setModalOpen, applicationUser }) => {
   // click for the dropdown
   const [click, setClick] = useState(false);
   // states for each drop-down
