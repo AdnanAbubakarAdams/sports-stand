@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { GoogleAuthProvider, signInWithPopup, getAuth } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup, getAuth, getAdditionalUserInfo } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -29,27 +29,58 @@ auth.useDeviceLanguage();
 // CREATE A PROVIDE FOR ANY AUTHENTICATION METHOD WE USING (TWITTER, FACEBOOK, EMAIL OR PASSWORD)
 const googleProvider = new GoogleAuthProvider();
 
+
+// export const signOUt = async () => {
+//   try {
+//     await auth.signOut();
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+
 // EXPORT FUNCTIONS THAT WE GETTING FROM FIREBASE AND ALSO PASSING IN THE PROVIDER WE CREATED WITH OUR AUTH
 export const signInWithGoogle =  () => {
     try {
   //the signInWithPopUp() method accepts ANY provider we create. This is all our authentication logic
     signInWithPopup(auth, googleProvider).then((res) => {
-    const user = res.user;
-    console.log(user)
+    const loggedInUser = res.user;
+    console.log(loggedInUser)
+    const isNewUser = getAdditionalUserInfo(res).isNewUser;
+
+    if (isNewUser) {
+      // delete user if the user is not in my database, even if they signing in with Google
+      loggedInUser.delete().then(() => {
+        signOut().then(() => {
+          console.log("Signed Out!");
+          alert("Please Sign Up First!");
+        })
+      })
+    }
   })
      } catch (err) {
       console.log(err);
     }
   };
 
+  // SIGNING UP WITH GOOGLE
+  export const singUpWithGoogle = async () => {
+    try {
+      signInWithPopup(auth, googleProvider).then((res) => {
+        const user = res.user;
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   // THE SIGNOUT METHOD
   export const signOut = async () => {
     try {
-        await auth.signOut()
-        alert("You've currently been signed out - see ya")
+        await auth.signOut();
+        alert("You've currently been signed out - see ya");
     } catch (error) {
-        console.log(error);
+        console.error(error);
     }
-  }
+  };
 
 
