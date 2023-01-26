@@ -5,6 +5,7 @@ import './App.css';
 import Navbar from './components/NavBar/Navbar';
 import Cart from './components/Stores/Cart';
 import Stores from './components/Stores/Stores';
+import loginModal from './components/LoginModal/LoginModal';
 // import BasketBall from './components/BasketBall/BasketBall';
 
 // PROVIDERS --->
@@ -23,10 +24,26 @@ import Footer from './components/Footer/Footer';
 import { LoginPage } from './pages/LoginPage';
 import { LoggedInPage} from  './pages/LoggedInPage'
 import FourOFour from './pages/FourOFour';
+import LoginModal from './components/LoginModal/LoginModal';
 
 
 function App() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState([]); // cart
+  const [modalOpen, setModalOpen] = useState(false);
+  const [users, setUsers] = useState([]);
+  const [applicationUser, setApplicationUser] = useState({
+    uuid: "",
+    firstname: "",
+    lastname: "",
+    dob: "",
+    city: "",
+    state: "",
+    zipcode: "",
+    phonenumber: "",
+    email: "",
+    verified: "",
+    profilephoto: "",
+  });
 
   const handleClick = (product) => {
     if (cart.indexOf(product) !== -1) return;
@@ -46,7 +63,8 @@ function App() {
   return (
     <UserProvider>
     <Router>
-      <Navbar cartNum={cart.length}/>
+      <Navbar cartNum={cart.length} setModalOpen={setModalOpen} applicationUser={applicationUser}/>
+      <LoginModal modalOpen={modalOpen} setModalOpen={setModalOpen} setApplicationUser={applicationUser} />
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/players" element={<Index />} />
