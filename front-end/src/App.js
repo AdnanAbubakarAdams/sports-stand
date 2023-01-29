@@ -5,7 +5,8 @@ import './App.css';
 import Navbar from './components/NavBar/Navbar';
 import Cart from './components/Stores/Cart';
 import Stores from './components/Stores/Stores';
-import loginModal from './components/LoginModal/LoginModal';
+import LoginModal from './components/LoginModal/LoginModal';
+import SignUpPage from './components/SigngUp/SignUpPage';
 // import BasketBall from './components/BasketBall/BasketBall';
 
 // PROVIDERS --->
@@ -24,7 +25,7 @@ import Footer from './components/Footer/Footer';
 import { LoginPage } from './pages/LoginPage';
 import { LoggedInPage} from  './pages/LoggedInPage'
 import FourOFour from './pages/FourOFour';
-import LoginModal from './components/LoginModal/LoginModal';
+// import LoginModal from './components/LoginModal/LoginModal';
 
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
         <Route path="/leagues" element={<Leagues/>} />
         <Route path="/standings" element={<Standings/>} />
         <Route path="/nba" element={<Nba/>}/>
+        <Route path="/" element={<LoginPage setApplicationUser={setApplicationUser} />}/>
         <Route path="/login" element={<LoginPage/>}/>
         <Route path="/loggedInPage" element={<LoggedInPage/>}/>
         <Route path="/stores" element={<Stores handleClick={handleClick}/>} />
