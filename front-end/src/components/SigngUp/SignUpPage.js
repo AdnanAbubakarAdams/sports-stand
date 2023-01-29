@@ -57,7 +57,118 @@ const SignUpPage = ({ setApplicationUser }) => {
     }
   return (
     <div>
+        <form onSubmit={handleSubmit}>
+        <label htmlFor="name">FirstName:</label>
+        <br/>
+        <input
+          id="name"
+          value={newUser.firstname}
+          type="text"
+          onChange={handleInput}
+          placeholder="Adnan"
+          required
+        />
+        <br/>
+        <label htmlFor="lastname">LastName</label>
+        <br/>
+        <input
+          id="lastname"
+          type="text"
+          value={newUser.lastname}
+          placeholder="Abubakar"
+          onChange={handleInput}
+          required
+        />
+        <br/>
+        <label htmlFor="dob">Date of Birth</label>
+        <br/>
+        <input
+          id="dob"
+          type="date"
+          name="dob"
+          value={newUser.dob}
+          placeholder="Date of Birth"
+          onChange={handleInput}
+        />
+        <br/>
+        <label htmlFor="city">City</label>
+        <br/>
+        <input
+          id="city"
+          type="text"
+          name="city"
+          value={newUser.city}
+          placeholder="City"
+          onChange={handleInput}
+        />
+        <br/>
+        <label htmlFor="state">State</label>
+        <br/>
+        <input
+          id="state"
+          type="text"
+          name="state"
+          value={newUser.state}
+          placeholder="state"
+          onChange={handleInput}
+        />
+        <br/>
+        <label htmlFor="zipcode">Zipcode</label>
+        <br/>
+        <input
+          id="zipcode"
+          type="text"
+          name="zipcode"
+          value={newUser.zipcode}
+          placeholder="zipcode"
+          onChange={handleInput}
+        />
+        <br/>
+        <label htmlFor="phonenumber">PhoneNumber</label>
+        <br/>
+        <input
+          id="phonenumber"
+          type="tell"
+          name="phonenumber"
+          value={newUser.phonenumber}
+          placeholder="phonenumber"
+          onChange={handleInput}
+        />
+        <br/>
+        <label htmlFor="email">Email</label>
+        <br/>
+        <input
+          id="email"
+          type="text"
+          name="email"
+          value={newUser.email}
+          placeholder="email"
+          onChange={handleInput}
+        />
+        <br/>
+        <label htmlFor="profilephoto">ProfilePhoto</label>
+        <br/>
+        <input
+          id="profilephoto"
+          type="text"
+          name="profilephoto"
+          value={newUser.profilephoto}
+          placeholder="profilephoto"
+          onChange={handleInput}
+        />
+        <br/>
+        <label htmlFor="verification"></label>
+        {/* <br/> */}
+        <input
+          id="verification"
+        //   type="checkbox"
+          onChange={handleInput}
+          checked={newUser.verified}
+        />
 
+        <br />
+        <input type="submit" />
+      </form>
     </div>
   )
 }
