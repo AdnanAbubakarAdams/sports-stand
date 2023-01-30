@@ -68,6 +68,7 @@ function App() {
       <LoginModal modalOpen={modalOpen} setModalOpen={setModalOpen} setApplicationUser={applicationUser} />
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/sign-up" element={<SignUpPage applicationUser={applicationUser} setApplicationUser={setApplicationUser}/>} />
         <Route path="/players" element={<Index />} />
         <Route path="/players/new" element={<New/>} />
         <Route path="/players/:id" element={<Show/>} />

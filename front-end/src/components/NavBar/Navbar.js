@@ -5,6 +5,9 @@ import { Button } from "../Button/Button";
 import SoccerDropdown from "../Soccer/SoccerDropdown";
 import StoresDropdown from "../Stores/StoresDropdown";
 import BasketBallDropdown from "../BasketBall/BasketBallDropdown";
+import Timeline from "../Timeline/Timeline";
+import { UserContext } from "../../Providers/UserProvider";
+import { useContext } from "react";
 
 const Navbar = ({ cartNum, setModalOpen, applicationUser }) => {
   // click for the dropdown
@@ -13,6 +16,8 @@ const Navbar = ({ cartNum, setModalOpen, applicationUser }) => {
   const [soccerdropdown, setSoccerDropdown] = useState(false);
   const [storesdropdown, setStoresDropdown] = useState(false);
   const [basketballdropdown, setBasketballDropdown] = useState(false);
+
+  const user = useContext(UserContext)
 
   // functions // methods
   const handleClick = () => setClick(!click);
@@ -70,7 +75,9 @@ const Navbar = ({ cartNum, setModalOpen, applicationUser }) => {
     }
   };
 
-  return (
+  return user ? (
+    <Timeline applicationUser={applicationUser} />
+  ) : (
     <>
       <nav className="navbar">
         <Link to="/" className="nav-badge" onClick={closeMobileMenu}>
@@ -129,7 +136,8 @@ const Navbar = ({ cartNum, setModalOpen, applicationUser }) => {
           </Link>
         </ul>
 
-        <Button />
+        {/* <Button onClick={()=> setModalOpen(true)}/> */}
+        <button onClick={()=> setModalOpen(true)}>Login</button>
       </nav>
     </>
   );
