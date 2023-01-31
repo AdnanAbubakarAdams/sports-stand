@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import { Button } from "../Button/Button";
+// import { Button } from "../Button/Button";
 import SoccerDropdown from "../Soccer/SoccerDropdown";
 import StoresDropdown from "../Stores/StoresDropdown";
 import BasketBallDropdown from "../BasketBall/BasketBallDropdown";
@@ -134,10 +134,15 @@ const Navbar = ({ cartNum, setModalOpen, applicationUser }) => {
             <span>{cartNum}</span>
           </li>
           </Link>
+          {/* <li className="nav-item" onClick={closeMobileMenu}>
+          <button onClick={() => setModalOpen(true)} className="nav-links-mobile" >
+            Login
+          </button>
+        </li> */}
         </ul>
-
-        {/* <Button onClick={()=> setModalOpen(true)}/> */}
-        <button onClick={()=> setModalOpen(true)}>Login</button>
+        {/* <button></button> */}
+        <button className="nav-button" onClick={()=> setModalOpen(true)}>
+        <i id="avatar" className="fas fa-user"></i> Login</button>
       </nav>
     </>
   );

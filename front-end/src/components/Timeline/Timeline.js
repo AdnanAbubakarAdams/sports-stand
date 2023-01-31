@@ -1,12 +1,14 @@
 import React from 'react'; 
-import { useNavigate } from 'react-router-dom';
-import { userContext } from "../../Providers/UserProvider";
+// import { useNavigate } from 'react-router-dom';
+import { UserContext } from "../../Providers/UserProvider";
 import { signOut } from '../../Services/Firebase';
 import { useContext } from 'react';
 
 
-const Timeline = () => {
-  // const { applicationUser, displayName, photoURL, signOut } = useContext(AuthContext);
+const Timeline = ({ applicationUser }) => {
+  const user = useContext(UserContext);
+  // const navigate = useNavigate();
+  const { displayName, photoURL } = user;
 
   return (
     <nav className="bg-gray-800 flex items-center justify-between flex-wrap p-6">
@@ -30,7 +32,7 @@ const Timeline = () => {
           </span>
         </div>
         <div className="text-sm">
-          <button className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Sign Out</button>
+          <button className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0" onClick={signOut}>Sign Out</button>
           <i className="fas fa-envelope text-white mx-4"></i>
           <i className="fas fa-bell text-white"></i>
         </div>
