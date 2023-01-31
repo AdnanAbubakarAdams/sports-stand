@@ -37,18 +37,18 @@ const LoginModal = ({ modalOpen, setModalOpen, setApplicationUser }) => {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="avatar-container">
               <div className="login-avatar">
-                <i className="fa-solid fa-user"></i>
+                <i className="fas fa-user"></i>
               </div>
             </div>
             <div className="close">
               <div className="x-mark" onClick={() => setModalOpen(false)}>
-                <i className="fa-solid fa-xmark"></i>
+                <i className="fas fa-xmark"></i>
               </div>
             </div>
             <div className="signin-buttons">
               <h3>Login</h3>
               <button onClick={signInWithGoogle}>Sign in With Google</button>
-              <p>Not a user? <Link to="/sign-up" onClick={() => setModalOpen(false)}>Please sign up first.</Link></p>
+              <p>Not a user? <Link className="signupmsg" to="/sign-up" onClick={() => setModalOpen(false)}>Please sign up first.</Link></p>
             </div>
           </div>
         </div>

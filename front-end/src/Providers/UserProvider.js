@@ -5,7 +5,7 @@ import { auth } from "../Services/Firebase";
 export const UserContext = createContext(null);
 
 export const UserProvider = (props) => {
-    const [user, setUser] = useState("");
+    const [user, setUser] = useState(null);
 
     useEffect(() => {
         auth.onAuthStateChanged(async (user) => {
