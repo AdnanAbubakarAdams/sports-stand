@@ -2,8 +2,8 @@ import axios from 'axios';
 import React, { useState, useEffect, useContext  } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../Providers/UserProvider';
-// import { signUpWithGoogle } from '../../Services/Firebase';
-
+import { signUpWithGoogle } from '../../Services/Firebase';
+// 
 // API 
 const API = process.env.REACT_APP_BACKEND_API_KEY;
 
@@ -13,7 +13,6 @@ const SignUpPage = ({ setApplicationUser }) => {
     const user = useContext(UserContext);
 
     const [newUser, setNewUser] = useState({
-    uuid: "",
     firstname: "",
     lastname: "",
     dob: "",
@@ -35,7 +34,7 @@ const SignUpPage = ({ setApplicationUser }) => {
                 if(res.data.payload.uuid){
                     setAuthErrors([]);
                     setApplicationUser(res.data.payload);
-                    Navigate("/user-dashboard");
+                    navigate("/");
                 } else {
                     user.delete().then(() => setAuthErrors([...authErrors, "Sign up failed, please try again."]));
                 }
@@ -53,15 +52,15 @@ const SignUpPage = ({ setApplicationUser }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // await signUpWithGoogle();
+        await signUpWithGoogle();
     }
   return (
     <div>
         <form onSubmit={handleSubmit}>
-        <label htmlFor="name">FirstName:</label>
+        <label htmlFor="firstname">FirstName:</label>
         <br/>
         <input
-          id="name"
+          id="firstname"
           value={newUser.firstname}
           type="text"
           onChange={handleInput}
@@ -128,7 +127,7 @@ const SignUpPage = ({ setApplicationUser }) => {
         <br/>
         <input
           id="phonenumber"
-          type="tell"
+          type="tel"
           name="phonenumber"
           value={newUser.phonenumber}
           placeholder="phonenumber"
@@ -157,14 +156,14 @@ const SignUpPage = ({ setApplicationUser }) => {
           onChange={handleInput}
         />
         <br/>
-        <label htmlFor="verification"></label>
+        {/* <label htmlFor="verification"></label> */}
         {/* <br/> */}
-        <input
-          id="verification"
-        //   type="checkbox"
-          onChange={handleInput}
-          checked={newUser.verified}
-        />
+        {/* <input */}
+          {/* id="verification" */}
+        {/* //   type="checkbox" */}
+          {/* onChange={handleInput} */}
+          {/* checked={newUser.verified} */}
+        {/* /> */}
 
         <br />
         <input type="submit" />
