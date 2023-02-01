@@ -63,7 +63,7 @@ export const signInWithGoogle =  () => {
   };
 
   // SIGNING UP WITH GOOGLE
-  export const singUpWithGoogle = async () => {
+  export const signUpWithGoogle = async () => {
     try {
       signInWithPopup(auth, googleProvider).then((res) => {
         const user = res.user;
