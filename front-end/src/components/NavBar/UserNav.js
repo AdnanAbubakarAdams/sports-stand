@@ -1,30 +1,29 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from 'react'
+import { Link, useNavigate } from "react-router-dom";
+import { signOut } from "../../Services/Firebase";
+import { UserContext } from "../../Providers/UserProvider";
+
 import "./Navbar.css";
-// import { Button } from "../Button/Button";
+
+// components 
 import SoccerDropdown from "../Soccer/SoccerDropdown";
 import StoresDropdown from "../Stores/StoresDropdown";
 import BasketBallDropdown from "../BasketBall/BasketBallDropdown";
-// import Timeline from "../Timeline/Timeline";
-import { UserContext } from "../../Providers/UserProvider";
-import { useContext } from "react";
-import UserNav from "./UserNav";
 
-const Navbar = ({ cartNum, setModalOpen, applicationUser }) => {
-  // click for the dropdown
+
+const UserNav = ({applicationUser, cartNum, setModalOpen,}) => {
+     // click for the dropdown
   const [click, setClick] = useState(false);
   // states for each drop-down
   const [soccerdropdown, setSoccerDropdown] = useState(false);
   const [storesdropdown, setStoresDropdown] = useState(false);
   const [basketballdropdown, setBasketballDropdown] = useState(false);
 
-  const user = useContext(UserContext)
+   // functions // methods
+   const handleClick = () => setClick(!click);
+   const closeMobileMenu = () => setClick(false);
 
-  // functions // methods
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  // DROPDOWN MOUSE FUNCTIONS
+    // DROPDOWN MOUSE FUNCTIONS
   // SOCCER
   const hadndleSoc = () => {
     if (window.innerWidth < 960) {
@@ -76,10 +75,13 @@ const Navbar = ({ cartNum, setModalOpen, applicationUser }) => {
     }
   };
 
-  return user ? (
-    <UserNav applicationUser={applicationUser} />
-  ) : (
-    <>
+
+
+    const user = useContext(UserContext);
+    const navigate = useNavigate();
+    const { displayName, photoURL } = user;
+  return (
+    
       <nav className="navbar">
         <Link to="/" className="nav-badge" onClick={closeMobileMenu}>
           ADDYSPORTS 
@@ -135,18 +137,30 @@ const Navbar = ({ cartNum, setModalOpen, applicationUser }) => {
             <span>{cartNum}</span>
           </li>
           </Link>
+          {/* <li>
+             {applicationUser.verified ? (
+                        <i className='fas fa-circle-check'></i>
+                    ) : null}
+                    {displayName.split(" ").shift()}
+            </li> */}
+            <span className='bell-span'>
+            <li className='bell-envelope'>
+            <i className='far fa-envelope' id='envelope'></i>
+            <i className='far fa-bell' id='bell'></i>
+            </li>
+            <li className='profile-photo'>
+          <img src={applicationUser.profilephoto ? applicationUser.profilephoto : photoURL} className="profile-pic" alt={displayName} onClick={()=> setModalOpen(true)}/>
+          </li>
+          </span>
+          <button onClick={signOut}>signout</button>
           {/* <li className="nav-item" onClick={closeMobileMenu}>
           <button onClick={() => setModalOpen(true)} className="nav-links-mobile" >
             Login
           </button>
         </li> */}
         </ul>
-        {/* <button></button> */}
-        <button className="nav-button" onClick={()=> setModalOpen(true)}>
-        <i id="avatar" className="fas fa-user"></i> Login</button>
-      </nav>
-    </>
-  );
-};
+    </nav>
+  )
+}
 
-export default Navbar;
+export default UserNav;
