@@ -3,6 +3,8 @@ CREATE DATABASE sports_stand_dev;
 
 \c sports_stand_dev;
 
+DROP TABLE IF EXISTS users, players, comments, store;
+
 CREATE TABLE users (
     uuid TEXT PRIMARY KEY UNIQUE NOT NULL,
     firstname TEXT NOT NULL,
@@ -15,9 +17,8 @@ CREATE TABLE users (
     email TEXT NOT NULL,
     verified BOOLEAN default false,
     profilephoto TEXT
-)
+);
 
-DROP TABLE IF EXISTS players
 
 CREATE TABLE players (
     id SERIAL PRIMARY KEY,
@@ -31,7 +32,6 @@ CREATE TABLE players (
     is_idol BOOLEAN
 );
 
-DROP TABLE IF EXISTS comments;
 
 CREATE TABLE comments (
     id SERIAL PRIMARY KEY,
@@ -43,7 +43,6 @@ CREATE TABLE comments (
     ON DELETE CASCADE
 );
 
-DROP TABLE IF EXISTS store;
 
 CREATE TABLE store (
     id SERIAL PRIMARY KEY,
